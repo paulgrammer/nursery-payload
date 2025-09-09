@@ -7,6 +7,10 @@ import { CallToAction } from '../../blocks/CallToAction/config'
 import { Content } from '../../blocks/Content/config'
 import { FormBlock } from '../../blocks/Form/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
+import { SchoolLevels } from '../../blocks/SchoolLevels/config'
+import { LatestNews } from '../../blocks/LatestNews/config'
+import { DiscoverSchool } from '../../blocks/DiscoverSchool/config'
+import { Statistics } from '../../blocks/Statistics/config'
 import { hero } from '@/heros/config'
 import { slugField } from '@/fields/slug'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
@@ -75,7 +79,17 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
+              blocks: [
+                CallToAction,
+                Content,
+                MediaBlock,
+                Archive,
+                FormBlock,
+                SchoolLevels,
+                LatestNews,
+                DiscoverSchool,
+                Statistics,
+              ],
               required: true,
               admin: {
                 initCollapsed: true,
