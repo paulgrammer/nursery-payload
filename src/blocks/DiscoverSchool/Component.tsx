@@ -2,6 +2,7 @@ import React from 'react'
 import type { DiscoverSchoolBlock as DiscoverSchoolBlockProps } from '@/payload-types'
 import { Media } from '@/components/Media'
 import { CMSLink } from '@/components/Link'
+import { Button } from '@/components/ui/button'
 
 export const DiscoverSchoolBlock: React.FC<DiscoverSchoolBlockProps> = ({
   title,
@@ -16,10 +17,9 @@ export const DiscoverSchoolBlock: React.FC<DiscoverSchoolBlockProps> = ({
           <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mt-1">{title}</h2>
           <p className="mt-4 text-gray-700 leading-relaxed">{text}</p>
           {button?.enable && button.link && (
-            <CMSLink
-              {...button.link}
-              className="mt-6 bg-primary-blue text-white font-bold py-3 px-10 hover:bg-red-700 transition-colors duration-300 rounded-sm"
-            />
+            <Button asChild className="mt-6" size="lg">
+              <CMSLink {...button.link} />
+            </Button>
           )}
         </div>
         <div className="w-full md:w-1/2">

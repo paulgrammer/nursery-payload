@@ -5,6 +5,7 @@ import type { LatestNewsBlock as LatestNewsBlockProps } from '@/payload-types'
 import { CMSLink } from '@/components/Link'
 import { Media } from '@/components/Media'
 import { formatDateTime } from '@/utilities/formatDateTime'
+import { Button } from '@/components/ui/button'
 
 export const LatestNewsBlock: React.FC<LatestNewsBlockProps> = async ({ title, button }) => {
   const payload = await getPayload({ config: configPromise })
@@ -46,10 +47,9 @@ export const LatestNewsBlock: React.FC<LatestNewsBlockProps> = async ({ title, b
           ))}
         </div>
         {button?.enable && button.link && (
-          <CMSLink
-            {...button.link}
-            className="mt-10 bg-primary-blue text-white font-bold py-3 px-10 hover:bg-[#7F2A0D] transition-colors duration-300 rounded-sm"
-          />
+          <Button asChild className="mt-10" size="lg">
+            <CMSLink {...button.link} />
+          </Button>
         )}
       </div>
     </section>
