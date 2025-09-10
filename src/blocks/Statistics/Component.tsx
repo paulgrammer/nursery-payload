@@ -1,6 +1,5 @@
 import React from 'react'
 import type { StatisticsBlock as StatisticsBlockProps } from '@/payload-types'
-import { Gutter } from '@/components/Gutter'
 
 const iconRegistry = {
   star: (
@@ -22,22 +21,20 @@ const iconRegistry = {
 
 export const StatisticsBlock: React.FC<StatisticsBlockProps> = ({ stats }) => {
   return (
-    <Gutter>
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-red-700 mb-2">
-                  {iconRegistry[stat.icon]}
-                </div>
-                <div className="text-4xl font-bold text-red-700 mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.description}</div>
+    <section className="py-16 px-4 bg-gray-50">
+      <div className="max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 text-center">
+          {stats.map((stat, index) => (
+            <div key={index}>
+              <div className="text-red-700 mb-2">
+                {iconRegistry[stat.icon]}
               </div>
-            ))}
-          </div>
+              <div className="text-4xl font-bold text-red-700 mb-2">{stat.value}</div>
+              <div className="text-gray-600">{stat.description}</div>
+            </div>
+          ))}
         </div>
-      </section>
-    </Gutter>
+      </div>
+    </section>
   )
 }
