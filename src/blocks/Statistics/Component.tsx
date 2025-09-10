@@ -26,10 +26,8 @@ export const StatisticsBlock: React.FC<StatisticsBlockProps> = ({ stats }) => {
         <div className="grid md:grid-cols-3 gap-8 text-center">
           {stats.map((stat, index) => (
             <div key={index}>
-              <div className="text-red-700 mb-2">
-                {iconRegistry[stat.icon]}
-              </div>
-              <div className="text-4xl font-bold text-red-700 mb-2">{stat.value}</div>
+              <div className="text-primary-red mb-2">{iconRegistry[stat.icon]}</div>
+              <div className="text-4xl font-bold text-primary-red mb-2">{stat.value}</div>
               <div className="text-gray-600">{stat.description}</div>
             </div>
           ))}

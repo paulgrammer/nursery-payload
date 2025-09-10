@@ -85,6 +85,8 @@ const config = {
           foreground: 'hsl(var(--primary-foreground))',
         },
         ring: 'hsl(var(--ring))',
+        'primary-blue': 'var(--color-primary-blue)',
+        'primary-red': 'var(--color-primary-red)',
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',

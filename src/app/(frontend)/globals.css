@@ -44,6 +44,9 @@
 
     --radius: 0.2rem;
 
+    --color-primary-blue: #0c145d;
+    --color-primary-red: #f40c0c;
+
     --success: 196 52% 74%;
     --warning: 34 89% 85%;
     --error: 10 100% 86%;
